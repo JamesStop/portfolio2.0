@@ -4,12 +4,10 @@ import './App.css';
 import Homepage from './components/Homepage/Homepage';
 import AboutMe from './components/AboutMe/AboutMe';
 
-
 function App() {
-
-  useEffect(() => {
-    window.localStorage.setItem('details', false)
-  }, [])
+	useEffect(() => {
+		window.localStorage.setItem('details', false);
+	}, []);
 
 	return (
 		<section className='main-app-wrapper'>
@@ -19,8 +17,8 @@ function App() {
 
 			<header className='header-wrapper'>
 				<Link to='/'>
-          <h1 className='header-header'>JAMES STOPPANI</h1>
-        </Link>
+					<h1 className='header-header'>JAMES STOPPANI</h1>
+				</Link>
 			</header>
 			<main className='main-wrapper'>
 				<Routes>

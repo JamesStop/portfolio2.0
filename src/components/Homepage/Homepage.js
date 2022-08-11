@@ -1,20 +1,25 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './Homepage.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import HomepageNavigate from './HomepageNavigate';
+import HomepageNavigate2 from './HomepageNavigate2';
 
 function Homepage(props) {
-	const [details, setDetails] = useState(window.localStorage.getItem('details') === 'true');
+	const [details, setDetails] = useState(
+		window.localStorage.getItem('details') === 'true'
+	);
 
-    useEffect(() => {
-        setDetails(window.localStorage.getItem('details') === 'true');
-    }, [])
+	useEffect(() => {
+		setDetails(window.localStorage.getItem('details') === 'true');
+	}, []);
 
-	const handleDetails = (event) => {
-        event.preventDefault()
-		setDetails(true);
-        window.localStorage.setItem('details', true);
+	const handleDetails = async (event) => {
+		event.preventDefault();
+		await setDetails(true);
+		await window.localStorage.setItem('details', true);
 	};
+
 
 	return (
 		<div className='homepage-wrapper'>
@@ -23,10 +28,7 @@ function Homepage(props) {
 					Who Is James?
 				</button>
 			) : (
-				<div className='details-wrapper'>
-					<Link to='/about'>about</Link>
-					<Link to='/projects'>projects</Link>
-				</div>
+				<HomepageNavigate2 />
 			)}
 		</div>
 	);
