@@ -27,6 +27,17 @@
     transition: 1.5s;
 }
 
+.loaded {
+    width: 80%;
+    font-size: 20px;
+}
+
+.loaded:hover {
+    height: 85%;
+    width: 95%;
+    font-size: 25px;
+}
+
 .first {
     left: 0;
     border-top-right-radius: 25px;

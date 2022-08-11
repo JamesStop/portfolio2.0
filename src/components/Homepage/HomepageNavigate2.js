@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './HomepageNavigate2.css';
 
 function HomepageNavigate2(props) {
@@ -8,70 +8,41 @@ function HomepageNavigate2(props) {
 		updateStyling();
 	}, []);
 
+	const [first, setFirst] = useState('first');
+	const [second, setSecond] = useState('second');
+	const [third, setThird] = useState('third');
+	const [fourth, setFourth] = useState('fourth');
+
 	const newStyling = (event) => {
-		document.querySelector('.first').style.width = '80%';
-		document.querySelector('.second').style.width = '80%';
-		document.querySelector('.third').style.width = '80%';
-		document.querySelector('.fourth').style.width = '80%';
-		document.querySelector('.first').style['font-size'] = '20px';
-		document.querySelector('.second').style['font-size'] = '20px';
-		document.querySelector('.third').style['font-size'] = '20px';
-		document.querySelector('.fourth').style['font-size'] = '20px';
+		setFirst('first loaded');
+        setSecond('second loaded');
+        setThird('third loaded');
+        setFourth('fourth loaded');
 	};
 
 	const updateStyling = (event) => {
 		setTimeout(newStyling, 100);
 	};
 
-	const handleHover = (event) => {
-		document.querySelector(`.${event.target.className}`).style.height = '85%';
-		document.querySelector(`.${event.target.className}`).style.width = '95%';
-		document.querySelector(`.${event.target.className}`).style['font-size'] =
-			'25px';
-	};
-
-	const handleStopHover = (event) => {
-		document.querySelector(`.${event.target.className}`).style.height = '65%';
-		document.querySelector(`.${event.target.className}`).style.width = '80%';
-		document.querySelector(`.${event.target.className}`).style['font-size'] =
-			'20px';
-	};
-
 	return (
 		<div className='details-wrapper-2'>
 			<div className='links-wrappers'>
-				<Link
-					to='/about'
-					className='first'
-					onMouseOver={handleHover}
-					onMouseOut={handleStopHover}>
+				<Link to='/about' className={first}>
 					first
 				</Link>
 			</div>
 			<div className='links-wrappers'>
-				<Link
-					to='/projects'
-					className='second'
-					onMouseOver={handleHover}
-					onMouseOut={handleStopHover}>
+				<Link to='/projects' className={second}>
 					second
 				</Link>
 			</div>
 			<div className='links-wrappers'>
-				<Link
-					to='/projects'
-					className='third'
-					onMouseOver={handleHover}
-					onMouseOut={handleStopHover}>
+				<Link to='/projects' className={third}>
 					third
 				</Link>
 			</div>
 			<div className='links-wrappers'>
-				<Link
-					to='/projects'
-					className='fourth'
-					onMouseOver={handleHover}
-					onMouseOut={handleStopHover}>
+				<Link to='/projects' className={fourth}>
 					fourth
 				</Link>
 			</div>
