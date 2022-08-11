@@ -1,0 +1,25 @@
+.homepage-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-details-buttons {
+    background-color: inherit;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.homepage-details-buttons:hover {
+    font-size: 30px;
+    color: white;
+    text-shadow: 3px 3px black;
+}
+
+.details-wrapper {
+    height: 100%;
+    width: 100%;
+}
