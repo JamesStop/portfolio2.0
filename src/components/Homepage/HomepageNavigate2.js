@@ -21,7 +21,7 @@ function HomepageNavigate2(props) {
 	};
 
 	const updateStyling = (event) => {
-		setTimeout(newStyling, 100);
+        newStyling()
 	};
 
 	return (
