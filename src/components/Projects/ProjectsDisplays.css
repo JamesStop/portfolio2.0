@@ -1,0 +1,9 @@
+.testingthing {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(166, 190, 204, .5);
+    display: flex;
+    padding: 10px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}

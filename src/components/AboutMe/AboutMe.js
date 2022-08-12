@@ -1,8 +1,10 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 
 function AboutMe(props) {
+	useEffect(() => {
+		window.localStorage.setItem('about', true);
+	}, []);
+
 	return <div>about me</div>;
 }
 

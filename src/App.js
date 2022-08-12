@@ -3,6 +3,12 @@ import { useEffect } from 'react';
 import './App.css';
 import Homepage from './components/Homepage/Homepage';
 import AboutMe from './components/AboutMe/AboutMe';
+import Projects from './components/Projects/Projects';
+import Experience from './components/Experience/Experience';
+import Contact from './components/Contact/Contact';
+
+
+
 
 function App() {
 	useEffect(() => {
@@ -24,6 +30,9 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Homepage />} />
 					<Route path='/about' element={<AboutMe />} />
+					<Route path='/projects' element={<Projects />} />
+					<Route path='/experience' element={<Experience />} />
+					<Route path='/contact' element={<Contact />} />
 				</Routes>
 			</main>
 		</section>

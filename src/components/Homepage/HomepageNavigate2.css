@@ -15,8 +15,7 @@
 }
 
 .first, .second, .third, .fourth {
-    min-height: 65px;
-    height: 65%;
+    height: 0;
     width: 0;
     font-size: 0;
     position: absolute;
@@ -25,9 +24,12 @@
     justify-content: center;
     align-items: center;
     transition: 1.5s;
+    background-color: rgb(201, 170, 199);
 }
 
 .loaded {
+    min-height: 65px;
+    height: 65%;
     width: 80%;
     font-size: 20px;
 }
@@ -60,4 +62,11 @@
     right: 0;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+}
+
+.picture-of-me {
+    height: 80%;
+    border-radius: 50%;
+    position: absolute;
+    right: 3%;
 }

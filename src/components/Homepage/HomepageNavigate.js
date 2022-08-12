@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function HomepageNavigate(props) {
-	useEffect(() => {
+	
+    
+    
+    useEffect(() => {
 		updateStyling();
 	}, []);
 
