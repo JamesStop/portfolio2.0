@@ -1,9 +1,10 @@
 import React, { createContext, useEffect, useState } from 'react';
 import masterball from '../Assets/masterball.png';
+import gitz from '../Assets/gitz.png'
 
 const ProjectsContext = createContext();
 
-function ProjectsContextProvider({children}) {
+function ProjectsContextProvider({ children }) {
 	const DEFAULT_PROJECTSDATA_LAYOUT = {
 		projectTitle: '',
 		projectDescription: '',
@@ -26,12 +27,22 @@ function ProjectsContextProvider({children}) {
 				github: 'https://github.com/JamesStop/The-Masterball',
 			},
 		},
+		{
+			projectTitle: 'The Gitz Carlton Employee Portal',
+			projectDescription:
+				'A hotel employee portal for checking in and out guests internally.',
+			projectImgSrc: gitz,
+			projectLinks: {
+				site: 'https://cozy-gnome-816bc0.netlify.app/',
+				github: 'https://github.com/CPlusPLusPlusPluss/Front-End-Project-3',
+			},
+		},
 	];
 	const [projects, setProjects] = useState([]);
 
-    useEffect(() => {
-        setProjects(projectsData);
-    }, [])
+	useEffect(() => {
+		setProjects(projectsData);
+	}, []);
 
 	return (
 		<ProjectsContext.Provider value={projects}>

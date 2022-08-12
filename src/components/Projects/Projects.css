@@ -29,8 +29,12 @@ li {
     align-items: center;
 }
 
+.projects-title-wrapper {
+    font-size: 25px;
+}
+
 .projects-display-wrapper {
-    height: calc(100% - 50px);
+    height: 65%;
     width: 100%;
     overflow-y: scroll;
     position: relative;

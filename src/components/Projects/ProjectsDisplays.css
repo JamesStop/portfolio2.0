@@ -3,7 +3,45 @@
     width: 100%;
     background-color: rgba(166, 190, 204, .5);
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     scroll-snap-align: center;
     scroll-snap-stop: always;
+}
+
+.project-title {
+    width: 100%;
+    text-align: center;
+}
+
+.project-image {
+    width: 50%;
+}
+
+.visit-button {
+    height: 25px;
+    width: 50px;
+}
+
+.left {
+    left: 25%;
+}
+
+.right {
+    right: 25%;
+}
+
+.project-description {
+    width: 45%;
+    text-align: center;
+    padding: 5px;
+    font-size: .75rem;
+}
+
+@media screen and (min-width: 500px) {
+    .project-description {
+        font-size: 1rem;
+    }
 }
