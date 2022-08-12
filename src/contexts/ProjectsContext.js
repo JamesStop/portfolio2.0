@@ -16,7 +16,7 @@ function ProjectsContextProvider({ children }) {
 			backendGithub: '',
 		},
 	};
-	const projectsData = [
+	const gaProjectsData = [
 		{
 			projectTitle: 'The Masterball',
 			projectDescription:
@@ -38,10 +38,10 @@ function ProjectsContextProvider({ children }) {
 			},
 		},
 	];
-	const [projects, setProjects] = useState([]);
+	const [projects, setProjects] = useState({});
 
 	useEffect(() => {
-		setProjects(projectsData);
+		setProjects({gaProjects: gaProjectsData});
 	}, []);
 
 	return (
