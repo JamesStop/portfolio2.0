@@ -1,27 +1,43 @@
-import React, { createContext, useState} from 'react';
-export const ProjectsContext = createContext()
+import React, { createContext, useEffect, useState } from 'react';
+import masterball from '../Assets/masterball.png';
 
+const ProjectsContext = createContext();
 
+function ProjectsContextProvider({children}) {
+	const DEFAULT_PROJECTSDATA_LAYOUT = {
+		projectTitle: '',
+		projectDescription: '',
+		projectImgSrc: '',
+		projectLinks: {
+			frontendSite: '',
+			frontendGithub: '',
+			backendSite: '',
+			backendGithub: '',
+		},
+	};
+	const projectsData = [
+		{
+			projectTitle: 'The Masterball',
+			projectDescription:
+				'A Pokemon Team creation and customization application.',
+			projectImgSrc: masterball,
+			projectLinks: {
+				site: 'https://the-masterball.netlify.app/',
+				github: 'https://github.com/JamesStop/The-Masterball',
+			},
+		},
+	];
+	const [projects, setProjects] = useState([]);
 
-function ProjectsContextProvider (props) {
-    const DEFAULT_PROJECTSDATA_LAYOUT = {
-        projectTitle: '',
-        projectDescription: '',
-        projectImgSrc:'',
-        projectLinks: {
-            frontendSite: '',
-            frontendGithub: '',
-            backendSite: '',
-            backendGithub: '',
-        }
-    }
-    const projectsData = [{
+    useEffect(() => {
+        setProjects(projectsData);
+    }, [])
 
-    }]
-    const [projects, setProjects] = useState(projectsData)
-    return (
-        <ProjectsContext.Provider value={projects}></ProjectsContext.Provider>
-    );
+	return (
+		<ProjectsContext.Provider value={projects}>
+			{children}
+		</ProjectsContext.Provider>
+	);
 }
 
-export default ProjectsContext;
+export { ProjectsContext, ProjectsContextProvider };

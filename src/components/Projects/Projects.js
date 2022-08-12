@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './Projects.css';
 import ProjectsDisplays from './ProjectsDisplays';
+import { ProjectsContext } from '../../contexts/ProjectsContext';
 
 function Projects(props) {
 	const [projectsType, setProjectsType] = useState('GA');
+	const projects = useContext(ProjectsContext)
 
 	const selectGa = () => {
 		setProjectsType('GA');
@@ -26,12 +28,17 @@ function Projects(props) {
 					<li onClick={selectPersonal}>Personal Projects</li>
 				</ul>
 			</nav>
+
 			<section className='projects-display-wrapper'>
-				<ProjectsDisplays />
-				<ProjectsDisplays />
-				<ProjectsDisplays />
-				<ProjectsDisplays />
-				<ProjectsDisplays />
+				{projects.map((project, index) => {
+					return (
+						<ProjectsDisplays
+							key={project.projectTitle}
+							project={project}
+							index={index}
+						/>
+					);
+				})}
 			</section>
 		</div>
 	);
