@@ -35,18 +35,23 @@ function Projects(props) {
 						<li onClick={selectPersonal}>Personal Projects</li>
 					</ul>
 				</nav>
-
-				<section className='projects-display-wrapper'>
-					{projects.gaProjects.map((project, index) => {
-					return (
-						<ProjectsDisplays
-							key={project.projectTitle}
-							project={project}
-							index={index}
-						/>
-					);
-				})}
-				</section>
+				{projectsType === 'GA' ? (
+					<section className='projects-display-wrapper'>
+						{projects.gaProjects.map((project, index) => {
+							return (
+								<ProjectsDisplays
+									key={project.projectTitle}
+									project={project}
+									index={index}
+								/>
+							);
+						})}
+					</section>
+				) : (
+					<section className='projects-display-wrapper'>
+						
+					</section>
+				)}
 			</div>
 		);
 	} else {
