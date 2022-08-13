@@ -34,6 +34,22 @@
     font-size: 20px;
 }
 
+@media screen and (max-width: 500px) {
+    .first span,
+        .third span {
+            position: absolute;
+            right: 30%;
+        }
+    
+        .second span,
+        .fourth span {
+            position: absolute;
+            left: 30%;
+        }
+}
+
+
+
 .loaded:hover {
     height: 85%;
     width: 95%;
@@ -65,8 +81,21 @@
 }
 
 .picture-of-me {
-    height: 80%;
+    width: 17%;
     border-radius: 50%;
     position: absolute;
     right: 3%;
+}
+
+.masterball-img {
+    width: 10%;
+    position: absolute;
+    left: 5%;
+}
+
+.dnd-img {
+    width: 10%;
+    border-radius: 50%;
+    position: absolute;
+    left: 18%;
 }

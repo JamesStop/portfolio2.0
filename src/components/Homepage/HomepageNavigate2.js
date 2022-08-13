@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './HomepageNavigate2.css';
 import photo from '../../Assets/mepicture.jpeg'
+import masterballpic from '../../Assets/masterballpic.png'
+import dnd from '../../Assets/dnd.png'
 
 function HomepageNavigate2(props) {
 	useEffect(() => {
@@ -30,22 +32,38 @@ function HomepageNavigate2(props) {
 			<div className='links-wrappers'>
 				<Link to='/about' className={first}>
 					<span>About James</span>
-                    {window.localStorage.getItem('about') == 'true' ? <img src={photo} className="picture-of-me" alt="photo of James" /> : null}
+					{window.localStorage.getItem('about') == 'true' ? (
+						<img src={photo} className='picture-of-me' alt='photo of James' />
+					) : null}
 				</Link>
 			</div>
 			<div className='links-wrappers'>
 				<Link to='/projects' className={second}>
-					James' Projects
+					<span>James' Projects</span>
+					{window.localStorage.getItem('projects') == 'true' ? (
+						<img
+							src={masterballpic}
+							className='masterball-img'
+							alt='masterball img'
+						/>
+					) : null}
+					{window.localStorage.getItem('projects') == 'true' ? (
+						<img
+							src={dnd}
+							className='dnd-img'
+							alt='dnd img'
+						/>
+					) : null}
 				</Link>
 			</div>
 			<div className='links-wrappers'>
 				<Link to='/experience' className={third}>
-					James' Experience
+					<span>James' Experience</span>
 				</Link>
 			</div>
 			<div className='links-wrappers'>
 				<Link to='/contact' className={fourth}>
-					Contact James
+					<span>Contact James</span>
 				</Link>
 			</div>
 		</div>
