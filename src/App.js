@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import './App.css';
 import Homepage from './components/Homepage/Homepage';
@@ -7,19 +7,30 @@ import Projects from './components/Projects/Projects';
 import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
 import { ProjectsContextProvider } from './contexts/ProjectsContext';
+import ClearStorage from './components/ClearStorage/ClearStorage';
 
 function App() {
 	useEffect(() => {
 		window.localStorage.setItem('details', false);
 	}, []);
 
+	const navigate = useNavigate()
+
+	const gotoClear = () => {
+		navigate('/clear_storage')
+	}
+
 	return (
 		<section className='main-app-wrapper'>
-			{window.innerHeight > 500 && window.innerWidth > 500 ? (
-				<button className='secret-button'>secret button</button>
-			) : null}
-
 			<header className='header-wrapper'>
+				{window.localStorage.getItem('about') &&
+				window.localStorage.getItem('projects') &&
+				window.localStorage.getItem('experience') &&
+				window.localStorage.getItem('contact') ? (
+					<button className='secret-button' onClick={gotoClear}>
+						!
+					</button>
+				) : null}
 				<Link to='/'>
 					<h1 className='header-header'>JAMES STOPPANI</h1>
 				</Link>
@@ -27,6 +38,7 @@ function App() {
 			<main className='main-wrapper'>
 				<Routes>
 					<Route path='/' element={<Homepage />} />
+					<Route path='/clear_storage' element={<ClearStorage />} />
 					<Route path='/about' element={<AboutMe />} />
 
 					<Route

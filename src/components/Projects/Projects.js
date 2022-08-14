@@ -49,7 +49,15 @@ function Projects(props) {
 					</section>
 				) : (
 					<section className='projects-display-wrapper'>
-						
+						{projects.personalProjects.map((project, index) => {
+							return (
+								<ProjectsDisplays
+									key={project.projectTitle}
+									project={project}
+									index={index}
+								/>
+							);
+						})}
 					</section>
 				)}
 			</div>

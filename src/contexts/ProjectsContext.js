@@ -1,6 +1,9 @@
 import React, { createContext, useEffect, useState } from 'react';
 import masterball from '../Assets/masterball.png';
 import gitz from '../Assets/gitz.png'
+import dndwithin from '../Assets/dndwithin.png'
+import portfolio from '../Assets/portfolio1.png'
+import idlegame from '../Assets/idlegame.png'
 
 const ProjectsContext = createContext();
 
@@ -37,11 +40,45 @@ function ProjectsContextProvider({ children }) {
 				github: 'https://github.com/CPlusPLusPlusPluss/Front-End-Project-3',
 			},
 		},
+		{
+			projectTitle: 'DnD Within',
+			projectDescription:
+				'A Dungeons and Dragons character creator app that uses state to simulate a temporary backend',
+			projectImgSrc: dndwithin,
+			projectLinks: {
+				site: 'https://cosmic-strudel-3baddd.netlify.app/',
+				github: 'https://github.com/JamesStop/DnD-Within',
+			},
+		},
+		{
+			projectTitle: 'Portfolio Verson 1.0',
+			projectDescription:
+				'First version of my portfolio site, made with vanilla Javascript, HTML, and CSS.',
+			projectImgSrc: portfolio,
+			projectLinks: {
+				site: 'https://jamesstop.github.io/JamesStoppaniPortfolioSite/',
+				github: 'https://github.com/JamesStop/JamesStoppaniPortfolioSite',
+			},
+		},
 	];
+
+	const personalProjects = [
+		{
+			projectTitle: 'Untitled Idle Game',
+			projectDescription:
+				'A work in progress vanilla Javascript, HTML, and CSS idle game that I began building before starting GA, and continue building whenever I find some free time',
+			projectImgSrc: idlegame,
+			projectLinks: {
+				site: 'https://jamesstop.github.io/Untitled-Idle-Game/',
+				github: 'https://github.com/JamesStop/Untitled-Idle-Game',
+			},
+		},
+	];
+
 	const [projects, setProjects] = useState({});
 
 	useEffect(() => {
-		setProjects({gaProjects: gaProjectsData});
+		setProjects({gaProjects: gaProjectsData, personalProjects: personalProjects});
 	}, []);
 
 	return (
