@@ -17,31 +17,82 @@
 }
 
 .project-image {
-    width: 50%;
+    width: 45%;
+    border: 1px solid black;
+    border-radius: 15px;
 }
 
 .visit-button {
     height: 25px;
     width: 50px;
+    background-color: rgb(212, 241, 213);
+    border-radius: 20px;
 }
 
 .left {
-    left: 25%;
+    left: 23%;
 }
 
 .right {
-    right: 25%;
+    right: 23%;
 }
 
-.project-description {
+.github-button-right {
+    right: 21%;
+}
+
+.github-button-left {
+    left: 25%;
+}
+
+.github-button-right, .github-button-left {
+    height: 25px;
+    width: 100px;
+    background-color: rgb(212, 241, 213);
+    border-radius: 20px;
+}
+
+.project-description-left, .project-description-right {
+    min-height: 25%;
     width: 45%;
-    text-align: center;
     padding: 5px;
     font-size: .75rem;
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 10px;
+}
+
+.project-description-left {
+    text-align: right;
+    margin-left: 20px;
+}
+
+.project-description-right {
+    text-align: left;
+    margin-right: 20px;
 }
 
 @media screen and (min-width: 500px) {
-    .project-description {
+    .project-description-left, .project-description-right  {
         font-size: 1rem;
     }
+
+       
+}
+
+@media screen and (max-width: 500px) {
+    .left {
+            left: 0;
+        }
+    
+        .right {
+            right: 0;
+        }
+    
+        .github-button-right {
+            right: 0;
+        }
+    
+        .github-button-left {
+            left: 0;
+        }
 }
