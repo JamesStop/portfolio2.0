@@ -34,23 +34,24 @@ body {
 
 .secret-button {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: rgb(133, 174, 187);
+  height: 35px;
+  width: 35px;
   border: none;
-  height: 25px;
-  width: 25px;
   z-index: 500;
-  font-size: 0px;
+  font-size: 20px;
+  font-weight: 900;
   border-radius: 50px;
+  border: 3px solid black;
+  background-color: rgb(83, 98, 141);
+  left: 3%;
+  transition: 1.5s;
 }
 
-.secret-button:hover {
-  border: 1px solid black;
-  background-color: rgb(57, 74, 78);
-  height: 50px;
-  width: 50px;
-  font-size: 10px;
+@media screen and (min-width: 500px) {
+  .secret-button {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .header-wrapper {

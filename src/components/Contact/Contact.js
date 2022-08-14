@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 function Contact(props) {
 	useEffect(() => {
-		window.localStorage.setItem('experience', true);
+		window.localStorage.setItem('contact', true);
 	}, []);
 
 	return <div>contact</div>;
