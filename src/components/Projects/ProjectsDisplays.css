@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    /* row-gap: 15px; */
     padding: 10px;
     scroll-snap-align: center;
     scroll-snap-stop: always;

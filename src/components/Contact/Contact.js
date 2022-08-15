@@ -5,7 +5,7 @@ function Contact(props) {
 		window.localStorage.setItem('contact', true);
 	}, []);
 
-	return <div>contact</div>;
+	return <div className='contact-wrapper'>contact</div>;
 }
 
 export default Contact;
