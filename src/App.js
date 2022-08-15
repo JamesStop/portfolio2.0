@@ -8,11 +8,9 @@ import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
 import { ProjectsContextProvider } from './contexts/ProjectsContext';
 import ClearStorage from './components/ClearStorage/ClearStorage';
+import { ExperiencesContextProvider } from './contexts/ExperiencesContext';
 
 function App() {
-	useEffect(() => {
-		window.localStorage.setItem('details', false);
-	}, []);
 
 	const navigate = useNavigate()
 
@@ -40,7 +38,6 @@ function App() {
 					<Route path='/' element={<Homepage />} />
 					<Route path='/clear_storage' element={<ClearStorage />} />
 					<Route path='/about' element={<AboutMe />} />
-
 					<Route
 						path='/projects'
 						element={
@@ -50,7 +47,14 @@ function App() {
 						}
 					/>
 
-					<Route path='/experience' element={<Experience />} />
+					<Route
+						path='/experience'
+						element={
+							<ExperiencesContextProvider>
+								<Experience />
+							</ExperiencesContextProvider>
+						}
+					/>
 					<Route path='/contact' element={<Contact />} />
 				</Routes>
 			</main>
