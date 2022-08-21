@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useState } from 'react';
 import './Experience.css'
 import { ExperiencesContext } from '../../contexts/ExperiencesContext';
+import ExperienceDisplay from './ExperienceDisplay';
 
 function Experience(props) {
 	useEffect(() => {
@@ -17,9 +18,9 @@ function Experience(props) {
 		return (
 			<div className='experience-wrapper'>
 				<h2 className='experience-title-wrapper'>Experience</h2>
-				<section className='experience-display-wrapper'>
+				<section className='experiences-display-wrapper'>
 					{experiences.map((experience) => {
-						return <div>hi</div>
+						return <ExperienceDisplay experience={experience}/>
 					})}
 				</section>
 				<button className='resume-button'>Resume</button>

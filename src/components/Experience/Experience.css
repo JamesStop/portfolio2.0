@@ -17,43 +17,43 @@
     text-decoration: underline;
 }
 
-.experience-display-wrapper {
+.experiences-display-wrapper {
     height: 70%;
     width: 100%;
     border-radius: 25px;
     overflow-x: scroll;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: x proximity;
     scroll-behavior: smooth;
     white-space: nowrap;
     background-color: rgba(241, 205, 205, .7);
 }
 
-.experience-display-wrapper::-webkit-scrollbar {
+.experiences-display-wrapper::-webkit-scrollbar {
     height: 15px;
 }
 
-.experience-display-wrapper::-webkit-scrollbar-track {
+.experiences-display-wrapper::-webkit-scrollbar-track {
     border-radius: 10px;
 }
 
-.experience-display-wrapper::-webkit-scrollbar-thumb {
+.experiences-display-wrapper::-webkit-scrollbar-thumb {
     background: rgb(138, 132, 132);
     border-radius: 10px;
 }
 
-.experience-display-wrapper::-webkit-scrollbar-button:end:increment {
+.experiences-display-wrapper::-webkit-scrollbar-button:end:increment {
     width: 20px;
     display: block;
     background: transparent;
 }
-.experience-display-wrapper::-webkit-scrollbar-button:start:increment {
+.experiences-display-wrapper::-webkit-scrollbar-button:start:increment {
     width: 20px;
     display: block;
     background: transparent;
 }
 
 @media screen and (max-width: 500px) {
-    .experience-display-wrapper::-webkit-scrollbar {
+    .experiences-display-wrapper::-webkit-scrollbar {
             height: 5px;
         }
 }
