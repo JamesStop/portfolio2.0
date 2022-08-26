@@ -4,7 +4,7 @@ import './ExperienceDisplay.css';
 function ExperienceDisplay({ experience }) {
 	return (
 		<div className='single-experience-display-wrapper'>
-			<h3>{experience.companyName}</h3>
+			<h3 className='experience-company-name'>{experience.companyName}</h3>
 			<p>{experience.duration}</p>
 			<img
 				className='experience-logo'
@@ -12,7 +12,7 @@ function ExperienceDisplay({ experience }) {
 				alt={`${experience.companyName} Logo`}
 			/>
 			<section className='experience-information-wrapper'>
-				<p>
+				<p className='experience-position'>
 					<span className='bold'>Position: </span>
 					{experience.position}
 				</p>

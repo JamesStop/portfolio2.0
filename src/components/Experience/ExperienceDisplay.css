@@ -15,7 +15,7 @@
 
 .experience-information-wrapper {
     width: 90%;
-    height: 25%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -23,10 +23,42 @@
     transition: 1.5s;
 }
 
-.experience-description {    
+.experience-position {
+    height: 25%;
+}
+
+.experience-description {   
+    height: 75%; 
     word-break: keep-all;
     white-space: normal;
     display: flex;
+    
+}   
+
+.description-text {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+
+
+.description-text::-webkit-scrollbar {
+    width: 10px;
+}
+
+.description-text::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.description-text::-webkit-scrollbar-thumb {
+    background: rgb(138, 132, 132);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .description-text::-webkit-scrollbar {
+        width: 5px;
+    }
 }
 
 .bold {
@@ -39,6 +71,11 @@
 }
 
 @media screen and (max-width: 500px) {
+
+    .experience-company-name {
+        font-size: 15px;
+    }
+
     .single-experience-display-wrapper {
         font-size: 15px;
     }
@@ -48,6 +85,6 @@
     }
 
     .experience-logo {
-        width: 70%;
+        width: 65%;
     }
 }

@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 50px;
 }
 
 .about-title {
@@ -21,6 +21,10 @@
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 50px;
 }
 
 .about-info::-webkit-scrollbar {
@@ -28,7 +32,12 @@
 }
 
 @media screen and (max-width: 500px) {
+    .about-wrapper {
+        gap: 25px;
+    }
+
     .about-info {
         font-size: .7rem;
+        margin: 0;
     }
 }

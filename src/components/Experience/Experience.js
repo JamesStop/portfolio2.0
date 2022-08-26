@@ -19,8 +19,8 @@ function Experience(props) {
 			<div className='experience-wrapper'>
 				<h2 className='experience-title-wrapper'>Experience</h2>
 				<section className='experiences-display-wrapper'>
-					{experiences.map((experience) => {
-						return <ExperienceDisplay experience={experience}/>
+					{experiences.map((experience, index) => {
+						return <ExperienceDisplay key={index} experience={experience}/>
 					})}
 				</section>
 				<button className='resume-button'>Resume</button>

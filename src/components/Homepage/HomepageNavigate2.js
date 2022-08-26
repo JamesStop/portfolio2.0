@@ -5,6 +5,7 @@ import './HomepageNavigate2.css';
 import photo from '../../Assets/mepicture.jpeg'
 import masterballpic from '../../Assets/masterballpic.png'
 import dnd from '../../Assets/dnd.png'
+import smallepoll from '../../Assets/smallepoll.png'
 
 function HomepageNavigate2(props) {
 	useEffect(() => {
@@ -48,17 +49,16 @@ function HomepageNavigate2(props) {
 						/>
 					) : null}
 					{window.localStorage.getItem('projects') == 'true' ? (
-						<img
-							src={dnd}
-							className='dnd-img'
-							alt='dnd img'
-						/>
+						<img src={dnd} className='dnd-img' alt='dnd img' />
 					) : null}
 				</Link>
 			</div>
 			<div className='links-wrappers'>
 				<Link to='/experience' className={third}>
 					<span>James' Experience</span>
+					{window.localStorage.getItem('about') == 'true' ? (
+						<img src={smallepoll} className='picture-of-me' alt='EPoll logo' />
+					) : null}
 				</Link>
 			</div>
 			<div className='links-wrappers'>
