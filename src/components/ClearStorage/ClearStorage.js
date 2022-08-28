@@ -1,7 +1,10 @@
 import React from 'react';
 import './ClearStorage.css'
+import { useNavigate } from 'react-router-dom';
 
 function ClearStorage(props) {
+	
+	const navigate = useNavigate()
 
     const clearStorage = () => {
         window.localStorage.removeItem('details')
@@ -9,6 +12,7 @@ function ClearStorage(props) {
         window.localStorage.removeItem('projects');
         window.localStorage.removeItem('experience');
         window.localStorage.removeItem('contact');
+		navigate('/')
     }
 
     return (

@@ -1,0 +1,73 @@
+.experience-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.experience-title-wrapper {
+    font-size: 25px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.experiences-display-wrapper {
+    height: 70%;
+    width: 100%;
+    border-radius: 25px;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    background-color: rgba(241, 205, 205, .7);
+}
+
+.experiences-display-wrapper::-webkit-scrollbar {
+    width: 15px;
+}
+
+.experiences-display-wrapper::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.experiences-display-wrapper::-webkit-scrollbar-thumb {
+    background: rgb(138, 132, 132);
+    border-radius: 10px;
+}
+
+.experiences-display-wrapper::-webkit-scrollbar-button:end:increment {
+    width: 20px;
+    display: block;
+    background: transparent;
+}
+.experiences-display-wrapper::-webkit-scrollbar-button:start:increment {
+    width: 20px;
+    display: block;
+    background: transparent;
+}
+
+@media screen and (max-width: 500px) {
+    .experiences-display-wrapper::-webkit-scrollbar {
+            height: 5px;
+        }
+}
+
+
+
+
+.resume-button {
+    height: 40px;
+    width: 125px;
+    font-size: 20px;
+    border-radius: 25px;
+    font-weight: 900;
+    background-color: rgb(213, 148, 219);
+    border: none;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, .5);
+}

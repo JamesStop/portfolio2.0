@@ -4,6 +4,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    font-weight: 900;
 }
 
 .links-wrappers {
@@ -98,4 +99,26 @@
     border-radius: 50%;
     position: absolute;
     left: 18%;
+}
+
+.email-img {
+    width: 9%;
+    position: absolute;
+    top: 10%;
+    left: 11%;
+}
+
+.github-img {
+    width: 9%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 19%;
+}
+
+.linkdin-img {
+    width: 9%;
+    position: absolute;
+    bottom: 10%;
+    left: 4%;
 }

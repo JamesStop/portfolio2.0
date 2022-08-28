@@ -8,17 +8,21 @@ import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
 import { ProjectsContextProvider } from './contexts/ProjectsContext';
 import ClearStorage from './components/ClearStorage/ClearStorage';
+import { ExperiencesContextProvider } from './contexts/ExperiencesContext';
+import home from './Assets/home.png'
+import Credits from './components/Credits/Credits';
 
 function App() {
-	useEffect(() => {
-		window.localStorage.setItem('details', false);
-	}, []);
 
 	const navigate = useNavigate()
 
 	const gotoClear = () => {
 		navigate('/clear_storage')
 	}
+
+	const gotoHome = () => {
+		navigate('/');
+	};
 
 	return (
 		<section className='main-app-wrapper'>
@@ -34,13 +38,15 @@ function App() {
 				<Link to='/'>
 					<h1 className='header-header'>JAMES STOPPANI</h1>
 				</Link>
+				<button className='home-button' onClick={gotoHome}>
+					<img className='home-img' src={home} />
+				</button>
 			</header>
 			<main className='main-wrapper'>
 				<Routes>
 					<Route path='/' element={<Homepage />} />
 					<Route path='/clear_storage' element={<ClearStorage />} />
 					<Route path='/about' element={<AboutMe />} />
-
 					<Route
 						path='/projects'
 						element={
@@ -50,10 +56,24 @@ function App() {
 						}
 					/>
 
-					<Route path='/experience' element={<Experience />} />
+					<Route
+						path='/experience'
+						element={
+							<ExperiencesContextProvider>
+								<Experience />
+							</ExperiencesContextProvider>
+						}
+					/>
 					<Route path='/contact' element={<Contact />} />
+					<Route path='/credits' element={<Credits />} />
 				</Routes>
 			</main>
+			<footer className='footer'>
+				<p>Ⓒ James Stoppani 2022</p>
+				<Link to='/credits'>
+					<p>credits + attributions</p>
+				</Link>
+			</footer>
 		</section>
 	);
 }

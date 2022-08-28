@@ -1,7 +1,7 @@
 .testingthing {
     height: 100%;
     width: 100%;
-    background-color: rgba(166, 190, 204, .5);
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

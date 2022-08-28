@@ -18,7 +18,6 @@ li {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    text-decoration: underline;
 }
 
 .projects-title-wrapper, .projects-nav-wrapper {
@@ -37,14 +36,52 @@ li {
     height: 65%;
     width: 100%;
     overflow-y: scroll;
-    position: relative;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    gap: 50px;
     border-radius: 10px;
     scroll-snap-type: y proximity;
     scroll-behavior: smooth;
+    background-color: rgba(166, 190, 204, .5);
 }
 
+
+
 .projects-display-wrapper::-webkit-scrollbar {
-    display: none;
+    height: 15px;
+    border-radius: 10px;
+}
+
+.projects-display-wrapper::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.projects-display-wrapper::-webkit-scrollbar-thumb {
+    background: rgb(138, 132, 132);
+    border-radius: 10px;
+}
+
+.projects-display-wrapper::-webkit-scrollbar-button:end:increment {
+    width: 20px;
+    display: block;
+    background: transparent;
+}
+
+.projects-display-wrapper::-webkit-scrollbar-button:start:increment {
+    width: 20px;
+    display: block;
+    background: transparent;
+}
+
+@media screen and (max-width: 500px) {
+    .projects-display-wrapper::-webkit-scrollbar {
+        height: 5px;
+    }
+}
+
+.nav-list li {
+    background-color: rgb(211, 175, 154);
+    border-radius: 10px;
+    height: 25px;
+    padding: 3px 5px;
+    text-align: center;
+    border: 1px solid black;
 }

@@ -1,8 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './Homepage.css';
-import { useNavigate } from 'react-router-dom';
-import HomepageNavigate from './HomepageNavigate';
 import HomepageNavigate2 from './HomepageNavigate2';
 
 function Homepage(props) {
