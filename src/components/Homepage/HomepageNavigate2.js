@@ -60,20 +60,20 @@ function HomepageNavigate2(props) {
 			<div className='links-wrappers'>
 				<Link to='/experience' className={third}>
 					<span>James' Experience</span>
-					{window.localStorage.getItem('about') == 'true' ? (
+					{window.localStorage.getItem('experience') == 'true' ? (
 						<img src={smallepoll} className='picture-of-me' alt='EPoll logo' />
 					) : null}
 				</Link>
 			</div>
 			<div className='links-wrappers'>
 				<Link to='/contact' className={fourth}>
-					{window.localStorage.getItem('projects') == 'true' ? (
+					{window.localStorage.getItem('contact') == 'true' ? (
 						<img src={email} className='email-img' alt='email img' />
 					) : null}
-					{window.localStorage.getItem('projects') == 'true' ? (
+					{window.localStorage.getItem('contact') == 'true' ? (
 						<img src={github} className='github-img' alt='github img' />
 					) : null}
-					{window.localStorage.getItem('projects') == 'true' ? (
+					{window.localStorage.getItem('contact') == 'true' ? (
 						<img src={linkdin} className='linkdin-img' alt='linkdin img' />
 					) : null}
 					<span>Contact James</span>
