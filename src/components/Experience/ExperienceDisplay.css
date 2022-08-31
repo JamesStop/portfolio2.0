@@ -11,6 +11,7 @@
 
 .experience-logo {
     width: 80%;
+    cursor: pointer;
 }
 
 .experience-information-wrapper {

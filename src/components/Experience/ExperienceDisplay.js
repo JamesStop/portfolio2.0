@@ -2,6 +2,12 @@ import React from 'react';
 import './ExperienceDisplay.css';
 
 function ExperienceDisplay({ experience }) {
+
+
+	const visit = () => {
+		window.open(experience.companyLink, '_blank');
+	}
+
 	return (
 		<div className='single-experience-display-wrapper'>
 			<h3 className='experience-company-name'>{experience.companyName}</h3>
@@ -10,6 +16,7 @@ function ExperienceDisplay({ experience }) {
 				className='experience-logo'
 				src={experience.companyLogo}
 				alt={`${experience.companyName} Logo`}
+				onClick={visit}
 			/>
 			<section className='experience-information-wrapper'>
 				<p className='experience-position'>
