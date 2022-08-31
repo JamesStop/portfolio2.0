@@ -2,6 +2,7 @@ import React, { useEffect, useContext, useState } from 'react';
 import './Experience.css'
 import { ExperiencesContext } from '../../contexts/ExperiencesContext';
 import ExperienceDisplay from './ExperienceDisplay';
+import resume from '../../Assets/resume.pdf'
 
 function Experience(props) {
 	useEffect(() => {
@@ -10,6 +11,10 @@ function Experience(props) {
 
 	let experiencesData = useContext(ExperiencesContext);
 	const [experiences, setExperience] = useState([])
+
+	const viewResume = () => {
+		window.open(resume, '_blank');
+	}
 
 
 	useEffect(() => {setExperience(experiencesData);}, [experiencesData]);
@@ -23,7 +28,7 @@ function Experience(props) {
 						return <ExperienceDisplay key={index} experience={experience}/>
 					})}
 				</section>
-				<button className='resume-button'>Resume</button>
+				<button className='resume-button' onClick={viewResume}>Resume</button>
 			</div>
 		);
 	}
