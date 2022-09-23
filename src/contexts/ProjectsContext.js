@@ -4,6 +4,7 @@ import gitz from '../Assets/gitz.png'
 import dndwithin from '../Assets/dndwithin.png'
 import portfolio from '../Assets/portfolio1.png'
 import idlegame from '../Assets/idlegame.png'
+import mobius from '../Assets/mobius.png'
 
 const ProjectsContext = createContext();
 
@@ -64,13 +65,13 @@ function ProjectsContextProvider({ children }) {
 
 	const personalProjects = [
 		{
-			projectTitle: 'Untitled Idle Game',
+			projectTitle: 'Mobius Spellbook',
 			projectDescription:
 				'A work in progress vanilla Javascript, HTML, and CSS idle game that I began building before starting GA, and continue building whenever I find some free time',
-			projectImgSrc: idlegame,
+			projectImgSrc: mobius,
 			projectLinks: {
-				site: 'https://jamesstop.github.io/Untitled-Idle-Game/',
-				github: 'https://github.com/JamesStop/Untitled-Idle-Game',
+				site: 'https://mobius-spellbook.netlify.app/',
+				github: 'https://github.com/JamesStop/Mobius-Spellbook',
 			},
 		},
 	];
