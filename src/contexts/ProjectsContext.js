@@ -37,7 +37,7 @@ function ProjectsContextProvider({ children }) {
 				'A hotel employee portal for checking in and out guests internally.',
 			projectImgSrc: gitz,
 			projectLinks: {
-				site: 'https://cozy-gnome-816bc0.netlify.app/',
+				site: 'https://gitz-carlton.netlify.app/',
 				github: 'https://github.com/CPlusPLusPlusPluss/Front-End-Project-3',
 			},
 		},
