@@ -5,6 +5,7 @@ import dndwithin from '../Assets/dndwithin.png'
 import portfolio from '../Assets/portfolio1.png'
 import idlegame from '../Assets/idlegame.png'
 import mobius from '../Assets/mobius.png'
+import table from '../Assets/table.png'
 
 const ProjectsContext = createContext();
 
@@ -72,6 +73,16 @@ function ProjectsContextProvider({ children }) {
 			projectLinks: {
 				site: 'https://mobius-spellbook.netlify.app/',
 				github: 'https://github.com/JamesStop/Mobius-Spellbook',
+			},
+		},
+		{
+			projectTitle: 'Table filtering practice',
+			projectDescription:
+				'Simple table filtering practice using react. Table and filter are responsive to the data chosen, and the url allows revisiting specific data/filter sets.',
+			projectImgSrc: table,
+			projectLinks: {
+				site: 'https://basic-table-filter-practice.netlify.app/',
+				github: 'https://github.com/JamesStop/table-filtering-practice',
 			},
 		},
 	];
