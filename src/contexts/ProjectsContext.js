@@ -6,6 +6,7 @@ import portfolio from '../Assets/portfolio1.png'
 import idlegame from '../Assets/idlegame.png'
 import mobius from '../Assets/mobius.png'
 import table from '../Assets/table.png'
+import SVG from '../Assets.SVG.png'
 
 const ProjectsContext = createContext();
 
@@ -83,6 +84,16 @@ function ProjectsContextProvider({ children }) {
 			projectLinks: {
 				site: 'https://basic-table-filter-practice.netlify.app/',
 				github: 'https://github.com/JamesStop/table-filtering-practice',
+			},
+		},
+		{
+			projectTitle: 'Fun with SVG',
+			projectDescription:
+				'Just a little fun learning and working with SVG elements to make images and animations.',
+			projectImgSrc: SVG,
+			projectLinks: {
+				site: 'https://jamesstop.github.io/svg-practice/',
+				github: 'https://github.com/JamesStop/svg-practice',
 			},
 		},
 	];
