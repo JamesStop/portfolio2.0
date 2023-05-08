@@ -6,7 +6,7 @@ import portfolio from '../Assets/portfolio1.png'
 import idlegame from '../Assets/idlegame.png'
 import mobius from '../Assets/mobius.png'
 import table from '../Assets/table.png'
-import SVG from '../Assets.SVG.png'
+import SVG from '../Assets.SVG.PNG'
 
 const ProjectsContext = createContext();
 
